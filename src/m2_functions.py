@@ -1,10 +1,13 @@
+import math
+import rosegraphics as rg
 """
+
 Practice DEFINING and CALLING
      FUNCTIONS
 
-Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+Authors:  David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
+         their colleagues and Austin Matuszewski
+"""  # DOne: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
@@ -26,7 +29,11 @@ def main():
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
     """
+answer = hyp(3,4)
+print answer
 
+move_turtles('blue',20)
+move_turtles
 
 ###############################################################################
 #
@@ -42,7 +49,15 @@ def main():
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
+def hyp(s1, s2):
+    return math.sqrt((s1 * s2) + (s2 * s2))
 
+def move_turtles(color,thickness):
+    window= rg.TurtleWindow()
+    turtle1 = rg.SimpleTurtle()
+    turtle1.pen = rg.Pen('green' , thickness)
+    turtle2 = rg.SimpleTurtle()
+    turtle2.pen = rg.Pen( color, 5)
 
 ###############################################################################
 #
