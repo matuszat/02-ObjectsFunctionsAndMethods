@@ -2,8 +2,8 @@
 This module lets you practice correcting SYNTAX (notation) errors.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Austin Matuszewski.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
@@ -30,26 +30,10 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 #   When finished, COMMIT-and-PUSH your work, as always.
 #
 ###############################################################################
-
+import math
 import rosegraphics as rg
 
-
-def main():
-    """ Calls the other functions in this module to demo them. """
-    print_math()
-    tutle_fn()
-
-
-def print_math:
-    """ Prints some calculated values. """
-    x = cos(pi)
-    print(x)
-
-    y = sin(pi)
-    print(The sine of PI is, y)
-
-
-def turtle_fun():
+def turtle_fn():
     """
     Constructs a TurtleWindow,
     constructs a classic SimpleTurtle and asks it to do some things,
@@ -58,15 +42,49 @@ def turtle_fun():
     window = rg.TurtleWindow()
 
     alan = rg.SimpleTurtle()
-alan.pen = rg.Pen('blue', 30)
+    alan.pen = rg.Pen('blue', 30)
     alan.paint_bucket = rg.PaintBucket('yellow')
 
-    alan.back(3 * (47 + 16)
-    al.begin_fill()
-    alan.circle(25)
+    alan.backward(3 * (47 + 16))
+    alan.begin_fill()
+    alan.draw_circle(25)
     alan.end_fill()
+    alan.forward(200)
 
-    forward(200)
+    window.close_on_mouse_click()
+
+def main():
+    """ Calls the other functions in this module to demo them. """
+    print_math()
+    turtle_fn()
+
+
+def print_math ():
+    """ Prints some calculated values. """
+    x = math.cos(math.pi)
+    print(x)
+
+    y = math.sin(math.pi)
+    print("The sine of PI is", y)
+
+
+def turtle_fn():
+    """
+    Constructs a TurtleWindow,
+    constructs a classic SimpleTurtle and asks it to do some things,
+    and waits for the user to click anywhere in the window to close it.
+    """
+    window = rg.TurtleWindow()
+
+    alan = rg.SimpleTurtle()
+    alan.pen = rg.Pen('blue', 30)
+    alan.paint_bucket = rg.PaintBucket('yellow')
+
+    alan.backward(3 * (47 + 16))
+    alan.begin_fill()
+    alan.draw_circle(25)
+    alan.end_fill()
+    alan.forward(200)
 
     window.close_on_mouse_click()
 
